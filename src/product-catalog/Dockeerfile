@@ -1,0 +1,13 @@
+FROM golang:1.22-alpine AS builder
+
+WORKDIR /usr/src/app
+
+copy . .
+RUN go mod download
+RUN go build -o product-catalog ./
+
+
+#########################
+FROM alpine as release 
+WORKDIR /usr/src/app
+COPY ./products ./products
