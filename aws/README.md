@@ -15,7 +15,7 @@ This will install the AWS CLI v2 at `/usr/local/bin/aws`.  Assuming
 $ aws --version
 ```
 
-
+ 
 ### Installing without sudo
 
 If you don't have ``sudo`` permissions or want to install the AWS
@@ -39,7 +39,6 @@ in this bundle, run the `install` script with `--update`:
 ```
 $ sudo ./install --update
 ```
-
 
 ### Removing the installation
 

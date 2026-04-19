@@ -8,7 +8,7 @@ resource "aws_s3_bucket" "terraform_state" {
   lifecycle {
     prevent_destroy = false
   }
-}
+} 
 
 resource "aws_s3_bucket_versioning" "terraform_state" {
   bucket = aws_s3_bucket.terraform_state.id
@@ -16,6 +16,7 @@ resource "aws_s3_bucket_versioning" "terraform_state" {
     status = "Enabled"
   }
 }
+
 
 resource "aws_dynamodb_table" "terraform_locks" {
   name         = "terraform-eks-state-locks"
